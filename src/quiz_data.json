@@ -1,0 +1,119 @@
+{
+  "quiz_questions": [
+    {
+      "id": 1,
+      "skill_name": "UI Design",
+      "instruction_text": "Select the mockup that comes closest to your current ",
+      "instruction_text2": " skills:",
+      "answer_options": [0, 1, 2, 3, 4, 5],
+      "answer_text": ["World-class UI mockup", "Solid, but not world-class mockup", "Middle-of-the-road mockup", "Very novice UI mockup", "Basically a pencil sketch", "I don't do mockups"],
+      "question_type": "card",
+      "value": 0,
+      "cta_text": "Next"
+    },
+    {
+      "id": 2,
+      "skill_name": "UX Design",
+      "instruction_text": "How much experience do you have with ",
+      "instruction_text2": "?",
+      "answer_options": [0, 1, 2, 3, 4, 5],
+      "question_type": "radiochange",
+      "answer_text": ["I ain't got none!", "Beginner", "Junior level", "Mid-level", "Senior level", "World-class"],
+      "answer_description": ["", " - I've mostly done student or practice projects", " - I've contributed to the design of at least one actual product", " - I've contributed to multiple projects over a few years", " - I've solved a wide variety of problems in different industries over many years", " - I produce top-quality, industry-leading work"],
+      "value": 0,
+      "cta_text": "Next"
+    },
+    {
+      "id": 3,
+      "skill_name": "User Research",
+      "instruction_text": "How many times have you done the following types of ",
+      "instruction_text2": "?",
+      "answer_options": [0, 1, 2],
+      "question_type": "input-cardchange",
+      "sections": [0, 1, 2, 3, 4],
+      "section_text": ["Conducting user interviews", "Launching user surveys", "Conducting usability tests", "Running A/B tests", "Any other types of user research (e.g. task analysis, card sorting, field studies, eyetracking, clickstream analysis, rapid prototyping, etc.)"],
+      "answer_text": ["Never", "A few times", "Lots o' times!"],      
+      "value": 0,
+      "cta_text": "Next"
+    },
+    {
+      "id": 4,
+      "skill_name": "Motion Design",
+      "instruction_text": "On a scale of 0 to 5, how would you rate your ",
+      "instruction_text2": " skills?",
+      "answer_options": [0, 1, 2],
+      "question_type": "input-card",
+      "sections": [0, 1, 2, 3, 4],
+      "section_text": ["Conducting user interviews", "Launching user surveys", "Conducting usability tests", "Running A/B tests", "Any other types of user research (e.g. task analysis, card sorting, field studies, eyetracking, clickstream analysis, rapid prototyping, etc.)"],
+      "answer_text": ["Never", "A few times", "Lots o' times!"],
+      "value": 0,
+      "cta_text": "Next"
+    }, 
+    {
+      "id": 5,
+      "skill_name": "",
+      "instruction_text": "For each of the following, rate how much experience you have with it and how much you enjoy it:",
+      "instruction_text2": "",
+      "answer_options": [0, 1, 2, 3, 4],
+      "question_type": "slider-radio-card",
+      "sections": [0, 1, 2, 3, 4],
+      "section_text": ["Working on a design team", "Managing a design team", "Coaching and mentoring other designers", "Interviewing and hiring designers", "Advocating for design within your company"],
+      "answer_text": ["World-class UI mockup", "Solid, but not world-class mockup", "Middle-of-the-road mockup", "Very novice UI mockup", "Basically a pencil sketch", "I don't do mockups"],
+      "emoji_text": ["Hate it", "Dislike it", "No opinion", "Like it", "Love it"],
+      "value": 0,
+      "cta_text": "Next"
+    },
+    {
+      "id": 6,
+      "skill_name": "Illustration",
+      "instruction_text": "Select the mockup that comes closest to your current ",
+      "instruction_text2": " skills:",
+      "answer_options": [0, 1, 2, 3, 4, 5],
+      "question_type": "card",
+      "answer_text": ["World-class UI mockup", "Solid, but not world-class mockup", "Middle-of-the-road mockup", "Very novice UI mockup", "Basically a pencil sketch", "I don't do mockups"],
+      "value": 0,
+      "cta_text": "Next"
+    },
+    {
+      "id": 7,
+      "skill_name": "Copywriting",
+      "instruction_text": "What's your experience with ",
+      "instruction_text2": "?",
+      "answer_options": [0, 1, 2, 3, 4, 5],
+      "question_type": "multi-radio",
+      "answer_text": ["World-class UI mockup", "Solid, but not world-class mockup", "Middle-of-the-road mockup", "Very novice UI mockup", "Basically a pencil sketch", "I don't do mockups"],
+      "value": 0,
+      "cta_text": "Next"
+    },
+    {
+      "id": 8,
+      "skill_name": "Front-end Code",
+      "instruction_text": "How much experience do you have with writing ",
+      "instruction_text2": "?",
+      "answer_options": [0, 1, 2, 3, 4, 5],
+      "question_type": "radio",
+      "answer_text": ["Nah, that ain't my thing", "I'm an informed non-engineer", "Junior level", "Mid-level", "Senior level", "World-class"],
+      "answer_description": ["", " - I'm familiar with the basics of HTML, CSS, and/or JavaScript, but I don't write much code", " - I can build a basic front end, but it's not my area of expertise", " - I'm a UI engineer", " - I'm a senior-level UI engineer", " - I'm a world-class engineer"],
+      "value": 0,
+      "cta_text": "Next"
+    },
+    {
+      "id": 9,
+      "skill_name": "",
+      "instruction_text": "Have you ever designed for the following technologies?",
+      "instruction_text2": "",
+      "answer_options": [0, 1, 2],
+      "question_type": "input-card",
+      "sections": [0, 1, 2],
+      "value": 0,
+      "section_text": ["Virtual, Augmented, or Mixed Reality (VR/AR/MR/XR)", "Machine Learning / Artificial Intelligence (AI)", "No UI / Voice Technology (e.g., Siri)"],
+      "answer_text": ["Never", "A few times", "Lots o' times!"],  
+      "cta_text": "Next"
+    } 
+  ],
+  "nav_text": [
+    {
+      "cta_text": "Previous"
+    }
+  ]
+}
