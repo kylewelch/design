@@ -34,7 +34,8 @@ class QuizQuestionRadio extends Component {
         {this.props.quiz_question.answer_options.map((answer_option, index) => {
           return <QuizQuestionRadioButton 
                     key={index} 
-                    button_text={answer_option} 
+                    index={index}
+                    answer_text={answer_option} 
                     isChecked={(this.props.currentSkillValue === index)}
                     clickHandler={this.handleClick.bind(this)} 
                     question_data={this.props.quiz_question} 

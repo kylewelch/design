@@ -53,7 +53,7 @@ class Quiz extends Component {
           updateValue={this.updateAnswerValue.bind(this)}
           showNextQuestionHandler={this.showNextQuestion.bind(this)}
           showPreviousQuestionHandler={this.showPreviousQuestion.bind(this)}
-          section_values={(this.state.quiz_position === 3) ? this.props.research_values : this.props.tech_values} /> }
+          section_values={(this.state.quiz_position === 3) ? this.props.research_values : (this.state.quiz_position === 4) ? this.props.motion_values : (this.state.quiz_position === 5) ? this.props.leader_values : (this.state.quiz_position === 7) ? this.props.writing_values : this.props.tech_values} /> }
       </div>
     )
   }

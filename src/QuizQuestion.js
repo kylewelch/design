@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import QuizQuestionCards from './QuizQuestionCards.js'
 import QuizQuestionRadio from './QuizQuestionRadio.js'
+import QuizQuestionMultiRadio from './QuizQuestionMultiRadio.js'
 import QuizQuestionInputCards from './QuizQuestionInputCards.js'
 import QuizQuestionSliderCards from './QuizQuestionSliderCards.js'
 
@@ -63,6 +64,18 @@ class QuizQuestion extends Component {
             nav_text={quizData.nav_text[0]}
             showNextQuestionHandler={this.showNextQuestion.bind(this)}
             showPreviousQuestionHandler={this.showPreviousQuestion.bind(this)}
+            section_values={this.props.section_values} /> 
+          : (this.props.quiz_question.question_type === "multi-radio") ? 
+          <QuizQuestionMultiRadio 
+            quiz_position={this.props.quiz_position}
+            quiz_question={quizData.quiz_questions[this.props.quiz_position - 1]}
+            value={0} 
+            updateSectionValue={this.updateAnswerSectionValue.bind(this)}
+            updateTotalValue={this.updateAnswerValue.bind(this)}
+            nav_text={quizData.nav_text[0]}
+            showNextQuestionHandler={this.showNextQuestion.bind(this)}
+            showPreviousQuestionHandler={this.showPreviousQuestion.bind(this)}
+            currentSkillValue={this.props.currentSkillValue}
             section_values={this.props.section_values} /> :
           <QuizQuestionCards 
             quiz_question={quizData.quiz_questions[this.props.quiz_position - 1]}

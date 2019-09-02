@@ -15,6 +15,9 @@ class App extends Component {
       arrangedValues: [],
       arrangedNames: [],
       researchValues: [null, null, null, null, null],
+      motionValues: [null, null, null],
+      leaderValues: [null, null, null, null, null],
+      writingValues: [null, null],
       techValues: [null, null, null]
     }
   }
@@ -23,6 +26,18 @@ class App extends Component {
       let currentValues = this.state.researchValues.slice()
       currentValues[section] = updatedValue
       this.setState({researchValues: currentValues})
+    } else if (position === 4) {
+      let currentValues = this.state.motionValues.slice()
+      currentValues[section] = updatedValue
+      this.setState({motionValues: currentValues})
+    } else if (position === 5) {
+      let currentValues = this.state.leaderValues.slice()
+      currentValues[section] = updatedValue
+      this.setState({leaderValues: currentValues})
+    } else if (position === 7) {
+      let currentValues = this.state.writingValues.slice()
+      currentValues[section] = updatedValue
+      this.setState({writingValues: currentValues})
     } else {
       let currentValues = this.state.techValues.slice()
       currentValues[section] = updatedValue
@@ -80,6 +95,9 @@ class App extends Component {
                          skill_names={this.state.arrangedNames}
                          unsorted_values={this.state.skillValues}
                          research_values={this.state.researchValues}
+                         motion_values={this.state.motionValues}
+                         leader_values={this.state.leaderValues}
+                         writing_values={this.state.writingValues}
                          tech_values={this.state.techValues}
                         /> 
                       : <Intro 
