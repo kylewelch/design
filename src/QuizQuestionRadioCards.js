@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import QuizQuestionRadioButton from './QuizQuestionRadioButton.js'
+import RadioCardButton from './RadioCardButton.js'
 import NavButton from './NavButton.js'
 import Validation from './QuizQuestionValidation.js'
 
 let quizData = require('./quiz_data.json')
 
-class QuizQuestionMultiRadio extends Component {
+class QuizQuestionRadioCards extends Component {
   constructor(props) {
     super(props)
     this.state={
@@ -51,7 +52,7 @@ class QuizQuestionMultiRadio extends Component {
           })}
         <p className="input-card-question">{this.props.quiz_question.question2}</p>
         {this.props.quiz_question.answer_options2.map((answer_option, index) => {
-          return <QuizQuestionRadioButton 
+          return <RadioCardButton 
                     key={index}
                     section={1}
                     index={index}
@@ -76,4 +77,4 @@ class QuizQuestionMultiRadio extends Component {
   }
 }
 
-export default QuizQuestionMultiRadio
+export default QuizQuestionRadioCards

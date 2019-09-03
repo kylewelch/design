@@ -10,46 +10,70 @@ class App extends Component {
     super(props)
     this.state = {
       current_screen: 1,
-      skillValues: [null, null, null, null, null, null, null, null, null],
-      skillNames: ['UI', 'UX', 'Research', 'Motion', 'Leadership', 'Illustration', 'Writing', 'Code', 'Future'], 
+      skillValues: [null, null, null, null, null, null, null, null, null, null],
+      skillNames: ['UI', 'UX', 'Research', 'Motion', 'Leadership', 'Illustration', 'Writing', 'Code', 'Future', 'Ops'], 
       arrangedValues: [],
       arrangedNames: [],
       researchValues: [null, null, null, null, null],
       motionValues: [null, null, null],
       leaderValues: [null, null, null, null, null],
+      illustrationValues: [null, null],
       writingValues: [null, null],
-      techValues: [null, null, null]
+      techValues: [null, null, null],
+      opsValues: [null, null, null]
     }
   }
+  
+  // For questions that collect multiple data points, store those data in the App state
+  
   updateSectionValue(updatedValue, section, position) {
-    if (position === 3) {
-      let currentValues = this.state.researchValues.slice()
-      currentValues[section] = updatedValue
-      this.setState({researchValues: currentValues})
-    } else if (position === 4) {
-      let currentValues = this.state.motionValues.slice()
-      currentValues[section] = updatedValue
-      this.setState({motionValues: currentValues})
-    } else if (position === 5) {
-      let currentValues = this.state.leaderValues.slice()
-      currentValues[section] = updatedValue
-      this.setState({leaderValues: currentValues})
-    } else if (position === 7) {
-      let currentValues = this.state.writingValues.slice()
-      currentValues[section] = updatedValue
-      this.setState({writingValues: currentValues})
-    } else {
-      let currentValues = this.state.techValues.slice()
-      currentValues[section] = updatedValue
-      this.setState({techValues: currentValues})
+    switch (position) {
+      case 3:
+        let researchValues = this.state.researchValues.slice()
+        researchValues[section] = updatedValue
+        this.setState({researchValues: researchValues})
+        break;
+      case 4:
+        let motionValues = this.state.motionValues.slice()
+        motionValues[section] = updatedValue
+        this.setState({motionValues: motionValues})
+        break;
+      case 5:
+        let leaderValues = this.state.leaderValues.slice()
+        leaderValues[section] = updatedValue
+        this.setState({leaderValues: leaderValues})
+        break;
+      case 6:
+        let illustrationValues = this.state.illustrationValues.slice()
+        illustrationValues[section] = updatedValue
+        this.setState({illustrationValues: illustrationValues})
+        break;       
+      case 7:
+        let writingValues = this.state.writingValues.slice()
+        writingValues[section] = updatedValue
+        this.setState({writingValues: writingValues})
+        break;
+      case 9:
+        let techValues = this.state.techValues.slice()
+        techValues[section] = updatedValue
+        this.setState({techValues: techValues})
+        break;
+      default:
+        let opsValues = this.state.opsValues.slice()
+        opsValues[section] = updatedValue
+        this.setState({opsValues: opsValues})         
     }
   }
+  
+  // Once a question is completed (ie user hits the 'Next' button), store the answer value in the App state
+  
   updateValue(updatedValue, thisIteration) {
     const skillValues = this.state.skillValues.slice()
     const skillNames = this.state.skillNames.slice()
     skillValues[thisIteration] = updatedValue
     this.setState({skillValues: skillValues})
     
+    // Sort all answers into a bell curve
     
     let skillArray = []
     function Skill(name, level) {
@@ -97,8 +121,10 @@ class App extends Component {
                          research_values={this.state.researchValues}
                          motion_values={this.state.motionValues}
                          leader_values={this.state.leaderValues}
+                         illustration_values={this.state.illustrationValues}
                          writing_values={this.state.writingValues}
                          tech_values={this.state.techValues}
+                         ops_values={this.state.opsValues}
                         /> 
                       : <Intro 
                           intro_content={introData.intro_pages[this.state.current_screen - 1]} 

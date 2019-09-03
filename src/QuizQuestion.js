@@ -4,6 +4,7 @@ import QuizQuestionRadio from './QuizQuestionRadio.js'
 import QuizQuestionMultiRadio from './QuizQuestionMultiRadio.js'
 import QuizQuestionInputCards from './QuizQuestionInputCards.js'
 import QuizQuestionSliderCards from './QuizQuestionSliderCards.js'
+import QuizQuestionRadioCards from './QuizQuestionRadioCards.js'
 
 let quizData = require('./quiz_data.json')
 
@@ -27,7 +28,7 @@ class QuizQuestion extends Component {
   render() {
     return (
       <main>
-        <p className="sub-heading">{'Question ' + this.props.quiz_question.id + ' of 9'}</p>
+        <p className="sub-heading">{'Question ' + this.props.quiz_question.id + ' of 10'}</p>
         <h1 className="main-heading">
           {this.props.quiz_question.instruction_text}
           <span className="main-heading-skill">{this.props.quiz_question.skill_name}</span>{this.props.quiz_question.instruction_text2}
@@ -65,6 +66,18 @@ class QuizQuestion extends Component {
             showNextQuestionHandler={this.showNextQuestion.bind(this)}
             showPreviousQuestionHandler={this.showPreviousQuestion.bind(this)}
             section_values={this.props.section_values} /> 
+          : (this.props.quiz_question.question_type === "radio-cards") ? 
+          <QuizQuestionRadioCards 
+            quiz_position={this.props.quiz_position}
+            quiz_question={quizData.quiz_questions[this.props.quiz_position - 1]}
+            value={0} 
+            updateSectionValue={this.updateAnswerSectionValue.bind(this)}
+            updateTotalValue={this.updateAnswerValue.bind(this)}
+            nav_text={quizData.nav_text[0]}
+            showNextQuestionHandler={this.showNextQuestion.bind(this)}
+            showPreviousQuestionHandler={this.showPreviousQuestion.bind(this)}
+            currentSkillValue={this.props.currentSkillValue}
+            section_values={this.props.section_values} />
           : (this.props.quiz_question.question_type === "multi-radio") ? 
           <QuizQuestionMultiRadio 
             quiz_position={this.props.quiz_position}

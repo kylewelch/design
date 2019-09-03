@@ -24,7 +24,7 @@ class QuizQuestionSliderCard extends Component {
           </div>
           <div className="input-card-content">
             <p className="input-card-question">{this.props.quiz_question.section_text[this.props.section]}</p>
-            <div class="slidecontainer">
+            <div className="slidecontainer">
               <input type="range" min="1" max="5" value="1" class="slider" />
             </div>
             <div className="input-card-button-container">

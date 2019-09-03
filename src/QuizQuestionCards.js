@@ -18,6 +18,7 @@ class QuizQuestionCards extends Component {
           {this.props.quiz_question.answer_options.map((answer_option, index) => {
             return <QuizQuestionCardButton 
                      key={index} 
+                     index={index}
                      button_text={answer_option} 
                      clickHandler={this.handleClick.bind(this)}
                      question_data={this.props.quiz_question}

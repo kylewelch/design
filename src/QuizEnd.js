@@ -1,57 +1,6 @@
 import React, { Component } from 'react'
 
 
-
-// Store the skills in an array and default the levels to zero
-
-
-function Skill(name, level, question) {
-  this.name = name;
-  this.level = level;
-  this.question = question;
-}
-
-let UI = new Skill('UI', 0, 'Select the mockup that comes closest to your current UI Design skills:');
-let UX = new Skill('UX', 4, 'How much experience do you have with UX Design?');
-let Research = new Skill('Research', 1, 'How many times have you done the following types of UX Research?');
-let Motion = new Skill('Motion', 3, 'On a scale of 0 to 5, how would you rate your Motion Design skills?');
-let Leadership = new Skill('Leadership', 2, 'For each of the following, rate how much experience you have and how much you enjoy it:');
-let Illustration = new Skill('Illustration', 2, 'Select the image that comes closest to your current Illustration skills:');
-let Writing = new Skill('Writing', 1, 'What\'s your experience with Copywriting?');
-let Dev = new Skill('Dev', 0, 'How much experience do you have with Front-end Code?');
-let Future = new Skill('Future', 1, 'Have you ever designed for any of the following technologies?');
-
-let Skills = [UI, UX, Research, Motion, Leadership, Illustration, Writing, Dev, Future];
-let SkillsCopy = [UI, UX, Research, Motion, Leadership, Illustration, Writing, Dev, Future];
-
-
-/* Sort the skills into a bell curve */
-
-
-let Sorted = SkillsCopy.sort((a, b) => (a.level > b.level) ? 1 : -1);
-  
-let firstHalf = [];
-let secondHalf = [];
-
-function SortSkills() {
-  
-  for (let i = 0; i < Sorted.length; i += 2) {
-      firstHalf.push(Sorted[i]);
-  }
-  
-    for (let i = 1; i < Sorted.length; i += 2) {
-      secondHalf.push(Sorted[i]);
-  }
-}
-
-SortSkills();
-
-let Arranged = firstHalf.concat(secondHalf.sort((a, b) => (a.level < b.level) ? 1 : -1));
-let Levels = Arranged.map(a => a.level);
-let SkillNames = Arranged.map(a => a.name);
-let Questions = Skills.map(a => a.question);
-const maxLevel = 5;
-
 // Single block component
 
 
@@ -75,7 +24,7 @@ class Column extends React.Component {
   
   render() {
     let col = [];
-    for (let i = 0; i < maxLevel; ++i) {
+    for (let i = 0; i < 5; ++i) {
       col.push(this.renderBlock(i));
     }
 

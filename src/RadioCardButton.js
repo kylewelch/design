@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import image from './img/placeholder-image.svg'
 
-class QuizQuestionCardButton extends Component {
+class RadioCardButton extends Component {
   handleClick() {
-    this.props.clickHandler(this.props.index)
+    this.props.clickHandler(this.props.index, this.props.section, this.props.quiz_position)
   }
   render() {
     return (
@@ -15,4 +15,4 @@ class QuizQuestionCardButton extends Component {
   }
 }
 
-export default QuizQuestionCardButton
+export default RadioCardButton
