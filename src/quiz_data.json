@@ -120,7 +120,7 @@
       "answer_options": [0, 1, 2],
       "sections": [0, 1, 2],
       "value": 0,
-      "section_text": ["Virtual, Augmented, or Mixed Reality (VR/AR/MR/XR)", "Machine Learning / Artificial Intelligence (AI)", "No UI / Voice Technology (e.g., Siri)"],
+      "section_text": ["Creating a design system", "Managing design tools for your team", "Defining team processes and best practices"],
       "answer_text": ["Never", "A few times", "Lots o' times!"],  
       "cta_text": "Next"
     } 
