@@ -23,5 +23,5 @@ jobs:
         npm run build --if-present
         npm run deploy  
       env:
-        CI: false,
+        CI: false
         TOKEN: test
