@@ -24,4 +24,4 @@ jobs:
         TOKEN=test npm run deploy  
       env:
         CI: false
-        TOKEN: test
+        TOKEN: ${{ secrets.FIREBASE_TOKEN }}
