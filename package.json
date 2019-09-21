@@ -12,7 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "firebase deploy --token process.env.TOKEN"
+    "deploy": "firebase deploy --token $TOKEN"
   },
   "eslintConfig": {
     "extends": "react-app"
