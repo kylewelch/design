@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import EmojiButton from './EmojiButton.js'
 import NavButton from './NavButton.js'
-import image from './img/placeholder-image.svg'
+import image from './assets/images/placeholder-image.svg'
 
-let quizData = require('./quiz_data.json')
+let quizData = require('./utils/quiz_data.json')
 
 class QuizQuestionSliderCard extends Component {
   handleClick(buttonText, section, position) {

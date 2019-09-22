@@ -3,7 +3,7 @@ import Quiz from './Quiz.js'
 import Intro from './Intro.js'
 import './App.css'
 
-let introData = require('./intro_data.json')
+let introData = require('./utils/intro_data.json')
 
 class App extends Component {
   constructor(props) {

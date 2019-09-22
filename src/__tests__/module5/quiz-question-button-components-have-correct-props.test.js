@@ -23,7 +23,7 @@ try {
 }
 
 let fs = require('fs');
-let quizData = require('../../quiz_data.json')
+let quizData = require('../../utils/quiz_data.json')
 
 describe('QuizQuestion Component', () => {
   it('has QuizQuestionButton components with correct props @quiz-question-button-components-have-correct-props', () => {

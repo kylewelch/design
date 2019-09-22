@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import QuizQuestion from './QuizQuestion.js'
 import QuizEnd from './QuizEnd.js'
 import NavButton from './NavButton.js'
-import image from './img/placeholder.png'
+import image from './assets/images/placeholder.png'
 
-let introData = require('./intro_data.json')
+let introData = require('./utils/intro_data.json')
 
 class Intro extends Component {
   handleClick(buttonText) {

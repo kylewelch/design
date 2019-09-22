@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import smiley from './img/smiley.svg'
+import smiley from './assets/images/smiley.svg'
 
 class Validation extends Component {
   handleClick() {

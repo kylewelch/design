@@ -3,7 +3,7 @@ import QuizQuestionRadioButton from './QuizQuestionRadioButton.js'
 import NavButton from './NavButton.js'
 import Validation from './QuizQuestionValidation.js'
 
-let quizData = require('./quiz_data.json')
+let quizData = require('./utils/quiz_data.json')
 
 class QuizQuestionRadio extends Component {
   constructor(props) {

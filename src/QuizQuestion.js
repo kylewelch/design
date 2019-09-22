@@ -4,7 +4,7 @@ import QuizQuestionRadio from './QuizQuestionRadio.js'
 import QuizQuestionInputCards from './QuizQuestionInputCards.js'
 import QuizQuestionSliderCards from './QuizQuestionSliderCards.js'
 
-let quizData = require('./quiz_data.json')
+let quizData = require('./utils/quiz_data.json')
 
 class QuizQuestion extends Component {
   constructor(props) {

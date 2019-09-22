@@ -23,7 +23,7 @@ try {
 }
 
 let fs = require('fs');
-let quizData = require('../../quiz_data.json')
+let quizData = require('../../utils/quiz_data.json')
 
 describe('Quiz Component', () => {
   it('has a render method that returns a single div with the text `Quiz`  @quiz-component-has-render-method', () => {
