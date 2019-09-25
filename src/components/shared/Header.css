@@ -1,0 +1,32 @@
+ul {
+  padding: 0;
+  flex-direction: row;
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  margin-right: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 22px;
+}
+
+.active {
+  font-weight: bold;
+}

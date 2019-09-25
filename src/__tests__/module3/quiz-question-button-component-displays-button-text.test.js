@@ -14,7 +14,7 @@ try {
 }
 
 let fs = require('fs');
-let quizData = require('../../quiz_data.json')
+let quizData = require('../../utils/quiz_data.json')
 
 describe('QuizQuestionButton Component', () => {
   it('displays correct button text @quiz-question-button-component-displays-button-text', () => {

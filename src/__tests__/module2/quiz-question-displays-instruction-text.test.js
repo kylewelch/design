@@ -23,7 +23,7 @@ try {
 }
 
 let fs = require('fs');
-let quizData = require('../../quiz_data.json')
+let quizData = require('../../utils/quiz_data.json')
 
 describe('QuizQuestion Component', () => {
   it('displays correct instruction text @quiz-question-displays-instruction-text', () => {

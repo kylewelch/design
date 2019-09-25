@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import QuizQuestionSliderCard from './QuizQuestionSliderCard.js'
 import NavButton from './NavButton.js'
 import Validation from './QuizQuestionValidation.js'
-import image from './img/placeholder-image.svg'
+import image from './assets/images/placeholder-image.svg'
 
 
-let quizData = require('./quiz_data.json')
+let quizData = require('./utils/quiz_data.json')
 
 class QuizQuestionSliderCards extends Component {
   constructor(props) {

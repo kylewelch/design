@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import image from './img/placeholder-image.svg'
+import image from './assets/images/placeholder-image.svg'
 
 class QuizQuestionCardButton extends Component {
   handleClick() {

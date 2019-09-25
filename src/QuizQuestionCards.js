@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import QuizQuestionCardButton from './QuizQuestionCardButton.js'
 import NavButton from './NavButton.js'
 
-let quizData = require('./quiz_data.json')
+let quizData = require('./utils/quiz_data.json')
 
 class QuizQuestionCards extends Component {
   handleClick(buttonText) {

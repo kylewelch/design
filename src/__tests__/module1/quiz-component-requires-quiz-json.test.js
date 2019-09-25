@@ -26,7 +26,7 @@ describe('Quiz Component', () => {
         if (element.kind == 'let') {
           if (element.declarations[0].id.name == 'quizData') {
             if (element.declarations[0].init.callee.name == 'require') {
-              if (element.declarations[0].init.arguments[0].value == './quiz_data.json') {
+              if (element.declarations[0].init.arguments[0].value == './utils/quiz_data.json') {
                 quiz_data_loaded_correctly = true
               } else {
                 assert(false, "We found where you're trying to require a file in the `quizData` variable, but it doesn't look like you're requiring the correct file.")
