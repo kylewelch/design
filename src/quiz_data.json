@@ -7,7 +7,7 @@
       "instruction_text": "Select the mockup that comes closest to your current ",
       "instruction_text2": " skills:",
       "answer_options": ["World-class UI mockup", "Solid, but not world-class mockup", "Middle-of-the-road mockup", "Very novice UI mockup", "Basically a pencil sketch", "I don't do mockups"],
-      "value": 0,
+      "values": [5, 4, 3, 2, 1, 0],
       "cta_text": "Next"
     },
     {
@@ -18,7 +18,7 @@
       "instruction_text2": "?",
       "answer_options": ["I ain't got none!", "Beginner", "Junior level", "Mid-level", "Senior level", "World-class"],
       "answer_description": ["", " - I've mostly done student or practice projects", " - I've contributed to the design of at least one actual product", " - I've contributed to multiple projects over a few years", " - I've solved a wide variety of problems in different industries over many years", " - I produce top-quality, industry-leading work"],
-      "value": 0,
+      "values": 0,
       "cta_text": "Next"
     },
     {
@@ -29,9 +29,9 @@
       "instruction_text2": "?",
       "answer_options": [0, 1, 2],
       "sections": [0, 1, 2, 3, 4],
-      "section_text": ["Conducting user interviews", "Launching user surveys", "Conducting usability tests", "Running A/B tests", "Any other types of user research (e.g. task analysis, card sorting, field studies, eyetracking, clickstream analysis, rapid prototyping, etc.)"],
+      "section_text": ["Conducting user interviews", "Launching user surveys", "Rapid prototyping or concept testing", "Running A/B tests or analytics", "Any other types of user research (e.g. task analysis, card sorting, field studies, etc.)"],
       "answer_text": ["Never", "A few times", "Lots o' times!"],      
-      "value": 0,
+      "values": 0,
       "cta_text": "Next"
     },
     {
@@ -44,7 +44,7 @@
       "sections": [0, 1, 2],
       "section_text": ["Micro-interactions (animation of a single element or action)", "Full-page interactions", "Animated videos"],
       "answer_text": ["Never", "A few times", "Lots o' times!"],
-      "value": 0,
+      "values": 0,
       "cta_text": "Next"
     }, 
     {
@@ -54,24 +54,25 @@
       "instruction_text": "For each of the following, rate how much experience you have with it and how much you enjoy it:",
       "instruction_text2": "",
       "answer_options": [0, 1, 2, 3, 4],
+      "button_values": [-2, -1, 0, 1, 2],
       "sections": [0, 1, 2, 3, 4],
       "section_text": ["Working on a design team", "Managing a design team", "Coaching and mentoring other designers", "Interviewing and hiring designers", "Advocating for design within your company"],
       "answer_text": ["World-class UI mockup", "Solid, but not world-class mockup", "Middle-of-the-road mockup", "Very novice UI mockup", "Basically a pencil sketch", "I don't do mockups"],
       "emoji_text": ["Hate it", "Dislike it", "No opinion", "Like it", "Love it"],
-      "value": 0,
+      "values": 0,
       "cta_text": "Next"
     },
     {
       "id": 6,
       "skill_name": "Illustration",
+      "question_type": "radio-cards",
       "instruction_text": "What's your experience with ",
       "instruction_text2": "?",
-      "question_type": "radio-cards",
-      "question1": "How often do you draw? (professionally or for fun)",
-      "answer_options": ["Never", "At least once a month", "At least once a week", "Daily (or most days)"],
-      "question2": "Select the image that comes closest to your current Illustration abilities?",
+      "question1": "How many years of professional illustration experience do you have?",
+      "answer_options": ["None", "less than 1", "1-2", "3-4", "5 or more"],
+      "question2": "Select the image that comes closest to your current Illustration abilities",
       "answer_options2": ["(crappy illustration)", "(decent illustration)", "(great illustration)", "(world-class illustration)"],
-      "value": 0,
+      "values": [0, 1, 2, 3],
       "cta_text": "Next"
     },
     {
@@ -84,7 +85,7 @@
       "answer_options": ["Never", "A few times", "Lots of times"],
       "question2": "How would you rate your writing ability?",
       "answer_options2": ["I not so good at making the English", "Decent, but not my specialty", "Above average", "My prose is crisp AF"],
-      "value": 0,
+      "values": 0,
       "cta_text": "Next"
     },
     {
@@ -95,7 +96,7 @@
       "instruction_text2": "?",
       "answer_options": ["Nah, that ain't my thing", "I'm an informed non-engineer", "Junior level", "Mid-level", "Senior level", "World-class"],
       "answer_description": ["", " - I'm familiar with the basics of HTML, CSS, and/or JavaScript, but I don't write much code", " - I can build a basic front end, but it's not my area of expertise", " - I'm a UI engineer", " - I'm a senior-level UI engineer", " - I'm a world-class engineer"],
-      "value": 0,
+      "values": 0,
       "cta_text": "Next"
     },
     {
@@ -106,22 +107,22 @@
       "instruction_text2": "",
       "answer_options": [0, 1, 2],
       "sections": [0, 1, 2],
-      "value": 0,
       "section_text": ["Virtual, Augmented, or Mixed Reality (VR/AR/MR/XR)", "Machine Learning / Artificial Intelligence (AI)", "No UI / Voice Technology (e.g., Siri)"],
       "answer_text": ["Never", "A few times", "Lots o' times!"],  
+      "values": 0,
       "cta_text": "Next"
     },
     {
       "id": 10,
       "skill_name": "Design Ops",
       "question_type": "input-card",
-      "instruction_text": "What's your experience with ",
+      "instruction_text": "How much experience do you have with the following aspects of ",
       "instruction_text2": "?",
       "answer_options": [0, 1, 2],
-      "sections": [0, 1, 2],
-      "value": 0,
-      "section_text": ["Creating a design system", "Managing design tools for your team", "Defining team processes and best practices"],
-      "answer_text": ["Never", "A few times", "Lots o' times!"],  
+      "sections": [0, 1, 2, 3, 4],
+      "section_text": ["Workflow - maximizing your design team’s output and efficiency", "Tooling - Managing the software and tools that your design team uses", "Design Systems - Contributing to a design system", "Education - helping members of your design team sharpen their skills", "Advocacy - promoting and advocating for design within your company"],
+      "answer_text": ["Never", "Done it a bit", "Done it a lot"], 
+      "values": 0,
       "cta_text": "Next"
     } 
   ],

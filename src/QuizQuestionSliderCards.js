@@ -18,6 +18,9 @@ class QuizQuestionSliderCards extends Component {
   updateSectionValue(newValue, section, position) {
     this.props.updateSectionValue(newValue, section, position)
   }
+  updateSliderValue(newValue, section) {
+    this.props.updateSliderValue(newValue, section)
+  }
   calculateTotal() {
     let scores = this.props.section_values
     
@@ -31,14 +34,32 @@ class QuizQuestionSliderCards extends Component {
       }
     }
 
-    let values = (this.props.quiz_position === 3) ? scores.slice() : scores.map(x => x * 2.5)
-
-    for (let i = 0; i < values.length; i++) {
-      if (values[i] === 2) {
-        values[i] = 3;
+    let updatedValues = scores.map(updateValues)
+    function updateValues(a) {
+      if (a === 0) {
+        return -2;
+      } 
+      else if (a === 1) {
+        return -1;
+      }
+      else if (a === 2) {
+        return 0;
+      }
+      else if (a === 3) {
+        return 1;
+      }
+      else {
+        return 2;
       }
     }
-    this.props.updateTotalValue(Math.round((values.reduce((a,b) => a + b, 0))/3));
+
+    let values = (updatedValues.reduce((a,b) => a + b, 0)) + (this.props.leader_values2.reduce((a,b) => a + b, 0))
+    
+    if (values < 0 ) {
+      values = 0
+    }
+        
+    this.props.updateTotalValue(Math.round(values/7));
     this.props.showNextQuestionHandler();
   }
   showPreviousQuestion() {
@@ -55,7 +76,9 @@ class QuizQuestionSliderCards extends Component {
                    quiz_question={this.props.quiz_question}
                    currentSkillValue={this.props.currentSkillValue}
                    updateValue={this.updateSectionValue.bind(this)}
+                   updateSliderValue={this.updateSliderValue.bind(this)}
                    section_values={this.props.section_values}
+                   slider_values={this.props.leader_values2}
                    />
         })}
         {this.state.isIncomplete ? <Validation /> : null}

@@ -19,6 +19,7 @@ class QuizQuestionCards extends Component {
             return <QuizQuestionCardButton 
                      key={index} 
                      index={index}
+                     value={this.props.quiz_question.values[index]}
                      button_text={answer_option} 
                      clickHandler={this.handleClick.bind(this)}
                      question_data={this.props.quiz_question}

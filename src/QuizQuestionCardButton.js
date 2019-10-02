@@ -3,7 +3,7 @@ import image from './img/placeholder-image.svg'
 
 class QuizQuestionCardButton extends Component {
   handleClick() {
-    this.props.clickHandler(this.props.index)
+    this.props.clickHandler(this.props.value)
   }
   render() {
     return (

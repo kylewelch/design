@@ -8,10 +8,15 @@ class Quiz extends Component {
   constructor(props) {
     super(props)
     this.ref = React.createRef()
-    this.state = {quiz_position: 1}
+    this.state = {
+      quiz_position: 1,
+      quiz_finished: false}
   }
   updateAnswerSectionValue(newValue, section, position) {
     this.props.updateQuizSectionValue(newValue, section, position)
+  }
+  updateAnswerSliderValue(newValue, section) {
+    this.props.updateQuizSliderValue(newValue, section)
   }
   updateAnswerValue(newValue) {
     let thisIteration = this.state.quiz_position - 1
@@ -30,7 +35,8 @@ class Quiz extends Component {
     this.ref.current.scrollIntoView(/*{behavior: 'smooth'}*/)
   }
   handleResetClick() {
-    this.setState({quiz_position: 1})
+    this.setState({quiz_position: 1, quiz_finished: false})
+    this.props.resetQuiz()
   }
   
   render() {
@@ -41,8 +47,13 @@ class Quiz extends Component {
       {isQuizEnd ? 
         <QuizEnd 
           resetClickHandler={this.handleResetClick.bind(this)} 
+          unsorted_values={this.props.unsorted_values}
           skills={this.props.skill_values} 
           names={this.props.skill_names}
+          full_names={this.props.full_names}
+          shape={this.props.shape}
+          deep_skills={this.props.deep_skills}
+          level={this.props.level}
         /> : 
         <QuizQuestion
           quiz_position={this.state.quiz_position}
@@ -50,11 +61,14 @@ class Quiz extends Component {
           value={0} 
           currentSkillValue={this.props.unsorted_values[this.state.quiz_position - 1]}
           updateSectionValue={this.updateAnswerSectionValue.bind(this)}
+          updateSliderValue={this.updateAnswerSliderValue.bind(this)}
           updateValue={this.updateAnswerValue.bind(this)}
           showNextQuestionHandler={this.showNextQuestion.bind(this)}
           showPreviousQuestionHandler={this.showPreviousQuestion.bind(this)}
           section_values={(this.state.quiz_position === 3) ? this.props.research_values : (this.state.quiz_position === 4) ? this.props.motion_values : (this.state.quiz_position === 5) ? 
-          this.props.leader_values : (this.state.quiz_position === 6) ? this.props.illustration_values :(this.state.quiz_position === 7) ? this.props.writing_values : (this.state.quiz_position === 9) ? this.props.tech_values : this.props.ops_values} /> }
+          this.props.leader_values : (this.state.quiz_position === 6) ? this.props.illustration_values :(this.state.quiz_position === 7) ? this.props.writing_values : (this.state.quiz_position === 9) ? this.props.tech_values : this.props.ops_values} 
+          leader_values2={this.props.leader_values2} /> }
+
       </div>
     )
   }

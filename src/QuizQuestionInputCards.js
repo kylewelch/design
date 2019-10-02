@@ -13,6 +13,7 @@ class QuizQuestionInputCards extends Component {
     super(props)
     this.state = {
       currentSection: 0,
+      sliderValues: [0, 0, 0, 0, 0],
       isIncomplete: null
     }
   }
@@ -32,7 +33,7 @@ class QuizQuestionInputCards extends Component {
       }
     }
 
-    let values = (this.props.quiz_position === 4 || this.props.quiz_position === 8) ? scores.slice() : scores.map(x => x * 2.5)
+    let values = (this.props.quiz_position === 3 || this.props.quiz_position === 10) ? scores.slice() : scores.map(x => x * 2.5)
 
     for (let i = 0; i < values.length; i++) {
       if (values[i] === 2) {

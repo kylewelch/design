@@ -25,10 +25,10 @@ class QuizQuestionRadioCards extends Component {
           return
         }
         else {
-          this.setState({isIncomplete: false})
+      this.setState({isIncomplete: false})
       }
     }
-    this.props.updateTotalValue((scores.reduce((a,b) => a + b, 0)));
+    this.props.updateTotalValue(Math.round((scores[0] + (scores[1] * 2))/2));
     this.props.showNextQuestionHandler();
   }
   showPreviousQuestion() {
@@ -56,7 +56,7 @@ class QuizQuestionRadioCards extends Component {
                     key={index}
                     section={1}
                     index={index}
-                    answer_text={answer_option} 
+                    button_text={answer_option} 
                     isChecked={(this.props.section_values[1] === index)}
                     clickHandler={this.handleClick.bind(this)} 
                     question_data={this.props.quiz_question} 

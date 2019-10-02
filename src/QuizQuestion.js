@@ -19,6 +19,9 @@ class QuizQuestion extends Component {
   updateAnswerSectionValue(newValue, section, position) {
     this.props.updateSectionValue(newValue, section, position)
   }
+  updateAnswerSliderValue(newValue, section) {
+    this.props.updateSliderValue(newValue, section)
+  }
   showNextQuestion(newValue) {
     this.props.showNextQuestionHandler()
   }
@@ -60,12 +63,14 @@ class QuizQuestion extends Component {
             quiz_question={quizData.quiz_questions[this.props.quiz_position - 1]}
             value={0} 
             updateSectionValue={this.updateAnswerSectionValue.bind(this)}
+            updateSliderValue={this.updateAnswerSliderValue.bind(this)}
             updateTotalValue={this.updateAnswerValue.bind(this)}
             currentSkillValue={this.props.currentSkillValue}
             nav_text={quizData.nav_text[0]}
             showNextQuestionHandler={this.showNextQuestion.bind(this)}
             showPreviousQuestionHandler={this.showPreviousQuestion.bind(this)}
-            section_values={this.props.section_values} /> 
+            section_values={this.props.section_values}
+            leader_values2={this.props.leader_values2} /> 
           : (this.props.quiz_question.question_type === "radio-cards") ? 
           <QuizQuestionRadioCards 
             quiz_position={this.props.quiz_position}
